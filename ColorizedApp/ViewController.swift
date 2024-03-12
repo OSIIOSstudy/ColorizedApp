@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    // MARK: - @IBOutlets
     @IBOutlet var colorizedView: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +31,7 @@ class ViewController: UIViewController {
         showColorResult(label: blueValueLabel, slider: blueSlider)
     }
     
+    // MARK: - IBAction Methods
     @IBAction func showRedValue() {
         showColorResult(label: redValueLabel, slider: redSlider)
     }
@@ -40,6 +44,7 @@ class ViewController: UIViewController {
         showColorResult(label: blueValueLabel, slider: blueSlider)
     }
     
+    // MARK: - Private Methods
     private func setupColorizedView() {
         colorizedView.layer.cornerRadius = 10
         colorizedView.layer.borderWidth = 2
